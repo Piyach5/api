@@ -8,10 +8,13 @@ const app = express();
 const port = 3000;
 
 mongoose
-  .connect("mongodb://localhost:27017/test", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb://mongo:LFSvhARCtyuaTAzLRAeMjZscRYBNAMAz@autorack.proxy.rlwy.net:34319",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
